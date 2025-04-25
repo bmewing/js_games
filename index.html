@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>War Card Game</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    #game { display: inline-block; }
+    .player-area { display: inline-block; margin: 0 50px; vertical-align: top; }
+    .deck, .card, .spoils { width: 100px; height: 150px; line-height: 150px; border: 1px solid #000; border-radius: 8px; margin: 10px auto; font-size: 18px; }
+    .deck { background: teal; color: #fff; cursor: pointer; }
+    .card { background: #fff; }
+    .spoils { background: #444; color: #fff; line-height: normal; height: auto; padding: 5px; }
+    #message { margin-top: 20px; font-weight: bold; }
+    #controls { margin-top: 20px; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; margin: 0 5px; }
+    #win-counter { font-size: 18px; margin-bottom: 10px; }
+    .war-zone { display: flex; justify-content: center; margin: 5px auto; }
+    .war-card { width: 60px; height: 90px; border: 1px solid #000; border-radius: 4px; margin: 0 2px; line-height: 90px; background: #ccc; }
+    .war-card.faceup { background: #fff; }
+  </style>
+</head>
+<body>
+  <div id="win-counter">Games Won: 0</div>
+  <div id="game">
+    <div class="player-area">
+      <h2>You</h2>
+      <div id="player-deck" class="deck">Deck: 26</div>
+      <div id="player-card" class="card"></div>
+      <div id="player-war" class="war-zone"></div>
+      <div id="player-spoils" class="spoils">Spoils: 0</div>
+    </div>
+    <div class="player-area">
+      <h2>Opponent</h2>
+      <div id="opponent-deck" class="deck">Deck: 26</div>
+      <div id="opponent-card" class="card"></div>
+      <div id="opponent-war" class="war-zone"></div>
+      <div id="opponent-spoils" class="spoils">Spoils: 0</div>
+    </div>
+    <div id="message">Click your deck to draw!</div>
+    <div id="controls"></div>
+  </div>
+</body>
+</html>
